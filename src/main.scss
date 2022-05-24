@@ -1,0 +1,11 @@
+@import "variables";
+@import "header";
+@import "keyframes";
+
+/* Global */
+
+* {
+  @include initial-size();
+  box-sizing: border-box;
+  font-size: 16px;
+}

@@ -1,0 +1,19 @@
+/* Colors */
+
+$black: #1f191b;
+$yellow: #f3bb5c;
+$brown: #5a4c31;
+$light-yellow: #cfbf84;
+$grey: #e5e5e5;
+
+/* Fonts */
+
+$libre-basker: "Libre Baskerville", serif;
+$roboto: "Roboto", sans-serif;
+
+/* No config */
+
+@mixin initial-size {
+  margin: 0;
+  padding: 0;
+}
