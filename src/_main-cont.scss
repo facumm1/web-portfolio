@@ -1,0 +1,261 @@
+main {
+  background-color: $black;
+
+  .main-about {
+    align-items: center;
+    background-color: $black;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    .about {
+      align-items: center;
+      background-color: $grey;
+      display: flex;
+      flex-direction: column;
+      font-family: $roboto;
+      font-size: 24px;
+      height: 55%;
+      width: 100%;
+
+      h2 {
+        font-family: $libre-basker;
+        font-size: 32px;
+        margin-top: 16px;
+      }
+
+      p {
+        text-align: left;
+        margin-top: 24px;
+        padding: 24px 0;
+        width: 80%;
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+
+    .skills {
+      border-radius: 8px;
+      align-items: center;
+      background-color: $black;
+      color: $grey;
+      display: flex;
+      flex-direction: column;
+      font-family: $roboto;
+      font-size: 24px;
+      height: 45%;
+      margin: 24px 0;
+      width: 100%;
+
+      h2 {
+        font-family: $libre-basker;
+        font-size: 32px;
+        margin-top: 24px;
+      }
+
+      .skills-images {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        max-width: 398px;
+        justify-content: center;
+        width: 95%;
+        flex-basis: 100px;
+
+        img {
+          width: 100px;
+          padding: 8px;
+        }
+      }
+    }
+  }
+
+  .divider {
+    border: 1px solid hsla(0, 0%, 90%, 0.4);
+    width: 90%;
+    margin: 0 auto;
+    height: 1px;
+    display: block;
+  }
+
+  .main-portfolio {
+    min-height: 100vh;
+    display: none;
+
+    h2 {
+      color: $grey;
+      font-size: 48px;
+      font-family: $libre-basker;
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .projects {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 32px;
+
+      .card {
+        border-radius: 4px;
+        margin: 16px;
+        object-fit: cover;
+        opacity: 0.85;
+        position: relative;
+        width: 290px;
+
+        img {
+          width: 100%;
+        }
+
+        &:hover .card-content {
+          transform: translateY(0);
+          height: 100%;
+        }
+
+        &:hover p {
+          opacity: 0;
+        }
+
+        .card-content {
+          background-color: $grey;
+          color: $black;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          padding: 20px;
+          height: 50%;
+          border-top-left-radius: 20px;
+          transform: translateY(70px);
+          transition: transform 0.25s;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -47px;
+            right: -45px;
+            width: 100px;
+            height: 100px;
+            transform: rotate(-175deg);
+            border-radius: 50%;
+            box-shadow: inset 48px 48px #fff;
+          }
+
+          .title {
+            color: #6a515e;
+          }
+
+          span {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 10px;
+          }
+
+          p {
+            color: $black;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.5s;
+          }
+        }
+      }
+    }
+
+    p {
+      text-align: center;
+      color: $grey;
+      font-family: $roboto;
+      font-size: 18px;
+      padding: 32px;
+
+      a {
+        text-decoration: underline;
+        color: $light-yellow;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  main {
+    background-color: $black;
+
+    .main-about {
+      align-items: flex-start;
+      background-color: $black;
+      color: $black;
+      display: flex;
+      flex-direction: row;
+      min-height: none;
+      height: 100%;
+      
+      .about {
+        align-items: center;
+        background-color: $grey;
+        display: flex;
+        flex-direction: column;
+        font-family: $roboto;
+        font-size: 24px;
+        height: 100vh;
+        justify-content: center;
+        width: 50%;
+  
+        h2 {
+          font-family: $libre-basker;
+          font-size: 32px;
+          margin-top: 16px;
+        }
+  
+        p {
+          text-align: left;
+          margin-top: 24px;
+          padding: 24px 0;
+          width: 80%;
+          font-size: 22px;
+          font-weight: 500;
+        }
+      }
+  
+      .skills {
+        border-radius: 8px;
+        align-items: center;
+        background-color: $black;
+        color: $grey;
+        display: flex;
+        flex-direction: column;
+        font-family: $roboto;
+        font-size: 24px;
+        height: 100vh;
+        justify-content: center;
+        margin: 0;
+        width: 50%;
+  
+        h2 {
+          font-family: $libre-basker;
+          font-size: 32px;
+          margin-top: 24px;
+        }
+  
+        .skills-images {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 24px;
+          max-width: 398px;
+          justify-content: center;
+          width: 95%;
+          flex-basis: 100px;
+  
+          img {
+            width: 130px;
+            padding: 16px;
+          }
+        }
+      }
+    }
+  }
+}

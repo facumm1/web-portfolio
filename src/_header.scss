@@ -1,11 +1,5 @@
 header {
-  background: linear-gradient(
-    180deg,
-    rgba(31, 25, 27, 1) 0%,
-    rgba(31, 25, 27, 1) 90%,
-    rgba(207, 191, 132, 1) 100%
-  );
-
+  background-color: $black;
   height: 100vh;
   width: 100%;
 
@@ -17,6 +11,10 @@ header {
     padding: 24px 48px;
 
     .logo {
+      animation: show-text 1s ease forwards;
+      transform: translateY(-100%);
+      opacity: 0;
+
       color: $light-yellow;
       i {
         font-size: 32px;
@@ -25,10 +23,10 @@ header {
 
     .nav {
       background-color: $grey;
-      height: 100vh;
+      height: 55vh;
       position: fixed;
-      top: 0;
-      left: 150%;
+      top: -150%;
+      left: 0;
       transition-duration: 0.25s;
       width: 100%;
       z-index: 1;
@@ -46,6 +44,14 @@ header {
           color: $black;
           font-size: 32px;
         }
+        .closer {
+          border: 1.5px solid $black;
+          border-radius: 100%;
+          padding: 12px;
+        }
+        .closer:active {
+          background-color: #1f191b33;
+        }
       }
 
       ul {
@@ -53,12 +59,12 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 75%;
+        height: 100%;
         width: 100%;
 
         li {
           list-style: none;
-          margin: 4px 0;
+          margin: 8px 0;
           text-align: center;
           width: 100%;
 
@@ -69,13 +75,28 @@ header {
             font-family: $roboto;
             text-decoration: none;
           }
+
+          .cv-btn {
+            /* padding-top: 16px; */
+            border: 1.5px solid $black;
+            border-radius: 16px;
+            padding: 8px;
+          }
         }
       }
     }
 
     .toggler {
+      animation: show-text 2s ease forwards;
+      transform: translateY(-100%);
+      opacity: 0;
+
       color: $light-yellow;
       font-size: 28px;
+    }
+
+    button {
+      display: none;
     }
   }
 
@@ -91,15 +112,17 @@ header {
       text-align: left;
 
       h2 {
-        animation: show-text 1s ease forwards;
+        animation: show-text 2s ease forwards;
         transform: translateX(-50%);
+        opacity: 0;
 
         font-family: $libre-basker;
         font-size: 48px;
       }
       p {
-        animation: show-text 1s ease forwards;
+        animation: show-text 2s ease forwards;
         transform: translateX(50%);
+        opacity: 0;
 
         font-family: $roboto;
         font-size: 24px;
@@ -114,10 +137,259 @@ header {
     }
 
     .personal-img {
+      animation: show-text 3s ease forwards;
+      transform: translateY(-15%);
+      opacity: 0;
+
       border-radius: 100%;
       display: block;
       margin: 0 auto;
+      min-width: 280px;
+      max-width: 333px;
       width: 80%;
+    }
+  }
+
+  .scroll-animation {
+    animation: show-text 3s ease forwards;
+    transform: translateY(-50%);
+    opacity: 0;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+    position: relative;
+
+    &:hover p{
+      border: 1px solid hsla(0, 0%, 90%, 0.4);
+      border-color: $light-yellow;
+      color: $light-yellow;
+      transition-duration: 1s;
+    }
+
+    &:hover span{
+      border-color: $light-yellow;
+      color: $light-yellow;
+      transition-duration: 1s;
+    }
+
+    p {
+      border-radius: 16px;
+      border-top: 1px solid hsla(0, 0%, 90%, 0.4);
+      color: hsla(0, 0%, 90%, 0.4);
+      font-family: $roboto;
+      padding: 8px;
+
+    }
+
+    span {
+      animation: scroll-indicator 0.75s infinite linear alternate;
+
+      border-right: 2px solid hsla(0, 0%, 90%, 0.4);
+      border-bottom: 2px solid hsla(0, 0%, 90%, 0.4);
+      height: 25px;
+      transform: rotate(45deg);
+      position: absolute;
+      width: 25px;
+
+      &:hover {
+        color: $light-yellow;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    .nav-container {
+      align-items: center;
+      background-color: $black;
+      display: flex;
+      justify-content: space-around;
+      padding: 24px 0;
+      margin: 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1;
+
+      .logo {
+        animation: show-text 1s ease forwards;
+        transform: translateY(-100%);
+        opacity: 0;
+
+        color: $light-yellow;
+        i {
+          font-size: 32px;
+        }
+      }
+
+      .nav {
+        background-color: transparent;
+        height: auto;
+        position: static;
+        transition-duration: 0;
+        width: fit-content;
+        z-index: 0;
+
+        .mobile-nav {
+          display: none;
+        }
+
+        ul {
+          animation: show-text 2s ease forwards;
+          transform: translateY(-100%);
+          opacity: 0;
+
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          height: 75%;
+          width: 100%;
+
+          li:last-child{
+            display: none;
+          }
+
+          li {
+            list-style: none;
+            margin: 0;
+            position: relative;
+            text-align: center;
+            width: 100%;
+
+            a {
+              width: 100%;
+              color: $light-yellow;
+              font-size: 16px;
+              font-family: $roboto;
+              text-decoration: none;
+              padding: 16px 32px;
+
+              &:hover {
+                box-shadow: 0 4px hsla(0, 0%, 90%, 0.5);
+                transition-duration: .5s;
+              }
+
+              &:active {
+                box-shadow: 0 4px $light-yellow;
+              }
+            }
+          }
+        }
+      }
+
+      .toggler {
+        display: none;
+      }
+
+      button {
+        animation: show-text 1s ease forwards;
+        transform: translateY(-100%);
+        opacity: 0;
+
+        background-color: $light-yellow;
+        border: none;
+        border-radius: 8px;
+        color: $black;
+        display: block;
+        font-family: $roboto;
+        font-weight: 800;
+        padding: 8px 32px;
+
+        &:hover{
+          background-color: $black;
+          border: 1px solid $light-yellow;
+          color: $light-yellow;
+          transition-duration: .5s;
+        }
+      }
+    }
+
+    .header-banner {
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      margin: 0 0 64px 0;
+
+      .text {
+        color: $grey;
+        margin-top: 0px;
+        margin-right: 40px;
+        text-align: left;
+        /* @include initial-size; */
+
+        h2 {
+          animation: show-text 3s ease forwards;
+          transform: translateY(-100%);
+          opacity: 0;
+
+          font-family: $libre-basker;
+          font-size: 80px;
+        }
+        p {
+          animation: show-text 3s ease forwards;
+          transform: translateY(-50%);
+          opacity: 0;
+
+          font-family: $roboto;
+          font-size: 40px;
+          margin-top: 16px;
+
+          @include initial-size;
+          strong {
+            z-index: 0;
+            color: $light-yellow;
+            font-size: 42px;
+          }
+        }
+      }
+
+      .personal-img {
+        border-radius: 100%;
+        display: block;
+        margin: 0 auto;
+        min-width: 380px;
+        max-width: 460px;
+        width: 55%;
+
+        @include initial-size;
+      }
+    }
+
+    .scroll-animation {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+      position: absolute;
+      bottom: 7.5%;
+
+      p {
+        color: hsla(0, 0%, 90%, 0.4);
+        font-family: $roboto;
+      }
+
+      span {
+        animation: scroll-indicator 0.75s infinite linear alternate;
+
+        height: 25px;
+        transform: rotate(45deg);
+        position: absolute;
+        width: 25px;
+
+        &:hover {
+          color: $light-yellow;
+        }
+      }
     }
   }
 }

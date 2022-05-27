@@ -1,5 +1,16 @@
 @keyframes show-text {
   to {
     transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-indicator {
+  0%{
+    top: 30px;
+  }
+
+  100%{
+    top: 40px;
   }
 }
