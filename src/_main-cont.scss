@@ -8,7 +8,8 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
+    display: none;
+
     .about {
       align-items: center;
       background-color: $grey;
@@ -77,88 +78,65 @@ main {
     margin: 0 auto;
     height: 1px;
     display: block;
+    display: none;
   }
 
-  .main-portfolio {
+  .main-projects {
     min-height: 100vh;
-    display: none;
+    padding: 16px 0;
 
     h2 {
       color: $grey;
       font-size: 48px;
       font-family: $libre-basker;
-      margin-top: 24px;
+      padding: 22px 0;
       text-align: center;
     }
 
-    .projects {
-      justify-content: center;
+    .project-list {
       display: flex;
       flex-wrap: wrap;
-      margin-top: 32px;
 
-      .card {
-        border-radius: 4px;
-        margin: 16px;
-        object-fit: cover;
-        opacity: 0.85;
-        position: relative;
-        width: 290px;
+      li {
+        background-color: $grey;
+        margin: 28px auto;
+        max-width: 361px;
+        width: 85%;
 
-        img {
-          width: 100%;
-        }
+        a {
+          text-decoration: none;
+          width: auto;
+          height: auto;
 
-        &:hover .card-content {
-          transform: translateY(0);
-          height: 100%;
-        }
-
-        &:hover p {
-          opacity: 0;
-        }
-
-        .card-content {
-          background-color: $grey;
-          color: $black;
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          padding: 20px;
-          height: 50%;
-          border-top-left-radius: 20px;
-          transform: translateY(70px);
-          transition: transform 0.25s;
-          overflow: hidden;
-
-          &::before {
-            content: "";
-            position: absolute;
-            top: -47px;
-            right: -45px;
-            width: 100px;
-            height: 100px;
-            transform: rotate(-175deg);
-            border-radius: 50%;
-            box-shadow: inset 48px 48px #fff;
-          }
-
-          .title {
-            color: #6a515e;
-          }
-
-          span {
-            display: block;
-            font-size: 12px;
-            margin-bottom: 10px;
+          img {
+            border: none;
+            height: 170px;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.8;
+            width: 100%;
           }
 
           p {
             color: $black;
-            font-size: 14px;
-            opacity: 0;
-            transition: opacity 0.5s;
+            font-family: $roboto;
+            font-size: 20px;
+            font-weight: 800;
+            margin: 16px 0;
+            padding: 0 8px;
+            text-align: left;
+          }
+        }
+
+        .links-container {
+          padding: 8px;
+          a {
+            i {
+              color: $black;
+              padding: 8px 16px;
+              font-size: 24px;
+              background-color: $light-yellow;
+            }
           }
         }
       }
@@ -169,12 +147,12 @@ main {
       color: $grey;
       font-family: $roboto;
       font-size: 18px;
-      padding: 32px;
+      font-weight: 500;
+      margin: 0 auto;
+      width: 80%;
 
       a {
-        text-decoration: underline;
         color: $light-yellow;
-        font-weight: bold;
         font-size: 18px;
       }
     }
@@ -185,6 +163,10 @@ main {
   main {
     background-color: $black;
 
+    .divider {
+      display: none;
+    }
+
     .main-about {
       align-items: flex-start;
       background-color: $black;
@@ -192,8 +174,8 @@ main {
       display: flex;
       flex-direction: row;
       min-height: none;
-      height: 100%;
-      
+      height: 100vh;
+
       .about {
         align-items: center;
         background-color: $grey;
@@ -201,16 +183,17 @@ main {
         flex-direction: column;
         font-family: $roboto;
         font-size: 24px;
-        height: 100vh;
+        height: 100%;
         justify-content: center;
         width: 50%;
-  
+        /* padding-top: 10rem; */
+
         h2 {
           font-family: $libre-basker;
           font-size: 32px;
           margin-top: 16px;
         }
-  
+
         p {
           text-align: left;
           margin-top: 24px;
@@ -220,7 +203,7 @@ main {
           font-weight: 500;
         }
       }
-  
+
       .skills {
         border-radius: 8px;
         align-items: center;
@@ -230,17 +213,18 @@ main {
         flex-direction: column;
         font-family: $roboto;
         font-size: 24px;
-        height: 100vh;
+        height: 100%;
         justify-content: center;
         margin: 0;
+        /* padding-top: 10rem; */
         width: 50%;
-  
+
         h2 {
           font-family: $libre-basker;
           font-size: 32px;
           margin-top: 24px;
         }
-  
+
         .skills-images {
           display: flex;
           flex-wrap: wrap;
@@ -249,7 +233,7 @@ main {
           justify-content: center;
           width: 95%;
           flex-basis: 100px;
-  
+
           img {
             width: 130px;
             padding: 16px;
