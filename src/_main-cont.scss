@@ -1,6 +1,6 @@
 main {
   background-color: $black;
-
+  
   .main-about {
     align-items: center;
     background-color: $black;
@@ -8,7 +8,7 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    display: none;
+    /* display: none; */
 
     .about {
       align-items: center;
@@ -78,7 +78,7 @@ main {
     margin: 0 auto;
     height: 1px;
     display: block;
-    display: none;
+    /* display: none; */
   }
 
   .main-projects {
@@ -148,7 +148,7 @@ main {
       font-family: $roboto;
       font-size: 18px;
       font-weight: 500;
-      margin: 0 auto;
+      margin: 24px auto;
       width: 80%;
 
       a {
@@ -238,6 +238,87 @@ main {
             width: 130px;
             padding: 16px;
           }
+        }
+      }
+    }
+
+    .main-projects {
+      min-height: 100vh;
+      padding: 16px 0;
+  
+      h2 {
+        color: $grey;
+        font-size: 48px;
+        font-family: $libre-basker;
+        padding: 22px 0;
+        text-align: center;
+      }
+  
+      .project-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* flex: 1 0 21%; */
+        width: 91%;
+        margin: 0 auto;
+
+        li {
+          background-color: $grey;
+          margin: 28px 28px;
+          max-width: 361px;
+          width: 85%;
+  
+          a {
+            text-decoration: none;
+            width: auto;
+            height: auto;
+  
+            img {
+              border: none;
+              height: 170px;
+              object-fit: cover;
+              object-position: center;
+              opacity: 0.8;
+              width: 100%;
+            }
+  
+            p {
+              color: $black;
+              font-family: $roboto;
+              font-size: 20px;
+              font-weight: 800;
+              margin: 16px 0;
+              padding: 0 8px;
+              text-align: left;
+            }
+          }
+  
+          .links-container {
+            padding: 8px;
+            a {
+              i {
+                color: $black;
+                padding: 8px 16px;
+                font-size: 24px;
+                background-color: $light-yellow;
+              }
+            }
+          }
+        }
+      }
+  
+      p {
+        text-align: center;
+        color: $grey;
+        font-family: $roboto;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 24px auto;
+        width: fit-content;
+  
+        a {
+          color: $light-yellow;
+          font-size: 18px;
         }
       }
     }

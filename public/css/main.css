@@ -47,7 +47,6 @@ header {
   background-color: #1f191b;
   height: 100vh;
   width: 100%;
-  display: none;
 }
 
 header .nav-container {
@@ -535,7 +534,7 @@ main .main-about {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  display: none;
+  /* display: none; */
 }
 
 main .main-about .about {
@@ -625,7 +624,7 @@ main .divider {
   margin: 0 auto;
   height: 1px;
   display: block;
-  display: none;
+  /* display: none; */
 }
 
 main .main-projects {
@@ -700,7 +699,7 @@ main .main-projects p {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
-  margin: 0 auto;
+  margin: 24px auto;
   width: 80%;
 }
 
@@ -814,8 +813,179 @@ main .main-projects p a {
     width: 130px;
     padding: 16px;
   }
+  main .main-projects {
+    min-height: 100vh;
+    padding: 16px 0;
+  }
+  main .main-projects h2 {
+    color: #e5e5e5;
+    font-size: 48px;
+    font-family: "Libre Baskerville", serif;
+    padding: 22px 0;
+    text-align: center;
+  }
+  main .main-projects .project-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    /* flex: 1 0 21%; */
+    width: 91%;
+    margin: 0 auto;
+  }
+  main .main-projects .project-list li {
+    background-color: #e5e5e5;
+    margin: 28px 28px;
+    max-width: 361px;
+    width: 85%;
+  }
+  main .main-projects .project-list li a {
+    text-decoration: none;
+    width: auto;
+    height: auto;
+  }
+  main .main-projects .project-list li a img {
+    border: none;
+    height: 170px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    opacity: 0.8;
+    width: 100%;
+  }
+  main .main-projects .project-list li a p {
+    color: #1f191b;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 16px 0;
+    padding: 0 8px;
+    text-align: left;
+  }
+  main .main-projects .project-list li .links-container {
+    padding: 8px;
+  }
+  main .main-projects .project-list li .links-container a i {
+    color: #1f191b;
+    padding: 8px 16px;
+    font-size: 24px;
+    background-color: #cfbf84;
+  }
+  main .main-projects p {
+    text-align: center;
+    color: #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 24px auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  main .main-projects p a {
+    color: #cfbf84;
+    font-size: 18px;
+  }
 }
 
 footer {
-  display: none;
+  color: #e5e5e5;
+  /* min-height: 60vh; */
+  background-color: #1f191b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .divider {
+  border: 1px solid rgba(230, 230, 230, 0.4);
+  width: 90%;
+  margin: 0 auto;
+  height: 1px;
+  display: block;
+  /* display: none; */
+}
+
+footer h1 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 32px;
+  margin: 24px 0;
+}
+
+footer p {
+  font-size: 20px;
+  margin: 16px 0;
+}
+
+footer .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 16px 0 64px 0;
+  width: 70%;
+}
+
+footer .footer-links a {
+  padding: 8px;
+  text-decoration: none;
+  text-align: center;
+}
+
+footer .footer-links a img {
+  width: 75px;
+}
+
+footer .footer-links a:hover img {
+  width: 85px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+footer .footer-links a span {
+  color: #e5e5e5;
+  font-weight: 800;
+  font-family: "Roboto", sans-serif;
+  padding: 16px 0;
+  text-decoration: none;
+}
+
+footer .footer-msg {
+  background-color: #e5e5e5;
+  color: #1f191b;
+  width: 100%;
+}
+
+footer .footer-msg p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 16px auto;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+footer .footer-msg p a {
+  color: #1f191b;
+  font-size: 18px;
+}
+
+footer .footer-msg p a:hover {
+  color: #cfbf84;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
