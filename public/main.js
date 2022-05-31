@@ -42,6 +42,7 @@ cvBtn.addEventListener("click", () => {
     if (pdfViewer.style.display == "block") {
       headerToggler.src = "/public/assets/icons/icon-hamburger.svg";
       pdfViewer.style.display = "none";
+      document.body.style.overflow = "auto";
       cvBtn.innerHTML = "Download CV";
       return;
     }

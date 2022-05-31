@@ -7,15 +7,6 @@ footer {
   align-items: center;
   /* display: none; */
   
-  .divider {
-    border: 1px solid hsla(0, 0%, 90%, 0.4);
-    width: 90%;
-    margin: 0 auto;
-    height: 1px;
-    display: block;
-    /* display: none; */
-  }
-
   h2 {
     font-family: $libre-basker;
     font-size: 40px;
@@ -24,7 +15,8 @@ footer {
 
   p {
     font-size: 20px;
-    margin: 16px 0;
+    margin: 16px 24px;
+    text-align: center;
   }
 
   .footer-links {
