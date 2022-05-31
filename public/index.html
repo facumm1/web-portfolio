@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,7 +28,7 @@
     />
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="nav-container">
         <a class="logo" href="#"><i class="fa-solid fa-code"></i></a>
         <nav class="nav">
@@ -41,26 +41,31 @@
             />
           </div>
 
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul class="nav-list">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li>
-              <a class="cv-btn" href="#">CV</a>
+              <button class="cv-btn" href="#">Download CV</button>
             </li>
           </ul>
         </nav>
-        <button>Download CV</button>
         <img
           class="toggler"
           src="/public/assets/icons/icon-hamburger.svg"
           alt="bars"
         />
       </div>
+      <iframe
+        class="pdf-viewer"
+        src="https://docs.google.com/viewer?srcid=13DT8RVPjx38srIiW-ZQhtHmfBlRBFk6M&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
+        width="100%"
+        height="100%"
+      ></iframe>
       <section class="header-banner">
         <div class="text">
-          <h2>Hi!</h2>
+          <h2>Hello!</h2>
           <p>
             I'm
             <strong>Facundo Mamani</strong>
@@ -71,13 +76,15 @@
         <img class="personal-img" src="/public/assets/images/me.jpg" alt="me" />
       </section>
       <div class="scroll-animation">
-        <p>Projects shortcut</p>
+        <p>
+          <a href="#projects">Projects shortcut</a>
+        </p>
         <span></span>
       </div>
     </header>
 
     <main>
-      <section class="main-about">
+      <section class="main-about" id="about">
         <div class="about">
           <h2>About me</h2>
           <p>
@@ -109,12 +116,12 @@
           </div>
         </div>
       </section>
-      <span class="divider"></span>
+      <span id="projects" class="divider"></span>
       <section class="main-projects">
         <h2>Projects</h2>
         <ul class="project-list">
           <li>
-            <a href="#">
+            <a href="https://loopstudios-landing-page-facumm1.netlify.app/">
               <img
                 src="/public/assets/images/loopstudios.png"
                 alt="loopstudios"
@@ -122,16 +129,18 @@
               <p>Loopstudios landing page</p>
             </a>
             <div class="links-container">
-              <a href="#">
+              <a href="https://loopstudios-landing-page-facumm1.netlify.app/">
                 <i class="fas fa-eye"></i>
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/facumm1/loopstudios-landing-page-main"
+              >
                 <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </li>
           <li>
-            <a href="#">
+            <a href="https://coding-bootcamp-testimonials-facumm1.netlify.app/">
               <img
                 src="/public/assets/images/testimonial-slider.PNG"
                 alt="testimonial-slider"
@@ -139,16 +148,20 @@
               <p>Testimonials image slider</p>
             </a>
             <div class="links-container">
-              <a href="#">
+              <a
+                href="https://coding-bootcamp-testimonials-facumm1.netlify.app/"
+              >
                 <i class="fas fa-eye"></i>
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/facumm1/coding-bootcamp-testimonials-slider-master"
+              >
                 <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </li>
           <li>
-            <a href="#">
+            <a href="https://base-apparel-facumm1.netlify.app/">
               <img
                 src="/public/assets/images/base-apparel.png"
                 alt="coming-soon"
@@ -156,16 +169,18 @@
               <p>Coming soon page</p>
             </a>
             <div class="links-container">
-              <a href="#">
+              <a href="https://base-apparel-facumm1.netlify.app/">
                 <i class="fas fa-eye"></i>
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/facumm1/base-apparel-coming-soon-master"
+              >
                 <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </li>
           <li>
-            <a href="#">
+            <a href="https://advice-generator-facumm1.netlify.app/">
               <img
                 src="/public/assets/images/advice-generator.png"
                 alt="advice-generator"
@@ -173,16 +188,16 @@
               <p>Advice generator app</p>
             </a>
             <div class="links-container">
-              <a href="#">
+              <a href="https://advice-generator-facumm1.netlify.app/">
                 <i class="fas fa-eye"></i>
               </a>
-              <a href="#">
+              <a href="https://github.com/facumm1/advice-generator-app-main">
                 <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </li>
           <li>
-            <a href="#">
+            <a href="https://interactive-rating-facumm1.netlify.app/">
               <img
                 src="/public/assets/images/interactive-rating.png"
                 alt="interactive-rating"
@@ -190,10 +205,12 @@
               <p>Interactive rating page</p>
             </a>
             <div class="links-container">
-              <a href="#">
+              <a href="https://interactive-rating-facumm1.netlify.app/">
                 <i class="fas fa-eye"></i>
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/facumm1/interactive-rating-component-main"
+              >
                 <i class="fa-brands fa-github"></i>
               </a>
             </div>
@@ -201,32 +218,35 @@
         </ul>
         <p>
           Maquetación proporcionada por
-          <a href="#">frontendmentor.io</a>
+          <a href="https://www.frontendmentor.io/home">frontendmentor.io</a>
         </p>
       </section>
     </main>
-    
-    <footer>
+
+    <footer id="contact">
       <span class="divider"></span>
-      <h1>Contact</h1>
-      <p>You can contact me by these ways</p>
+      <h2>Contact</h2>
+      <p>
+        Si te interesa, podés contactarme y ver mi actividad por estos medios.
+      </p>
       <div class="footer-links">
-        <a href="#">
-          <img src="/public/assets/images/email-2.svg" alt="email">
+        <a href="mailto:facundomamani120@gmail.com">
+          <img src="/public/assets/images/email-2.svg" alt="email" />
           <span>Email</span>
         </a>
-        <a href="#">
-          <img src="/public/assets/images/github.svg  " alt="github">
+        <a href="https://github.com/facumm1">
+          <img src="/public/assets/images/github.svg  " alt="github" />
           <span>Github</span>
         </a>
-        <a href="#">
-          <img src="/public/assets/images/linkedin.svg" alt="linkedin">
+        <a href="http://linkedin.com/in/facundo-mamani31">
+          <img src="/public/assets/images/linkedin.svg" alt="linkedin" />
           <span>Linkedin</span>
         </a>
       </div>
       <div class="footer-msg">
         <p>
-          Created by Facundo Mamani. Code on <a href="#">Github.</a> 
+          Created by Facundo Mamani. Code on
+          <a href="https://github.com/facumm1/portfolio-personal">Github.</a>
         </p>
       </div>
     </footer>

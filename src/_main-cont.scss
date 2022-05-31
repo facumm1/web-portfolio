@@ -1,6 +1,7 @@
 main {
   background-color: $black;
-  
+  /* display: none; */
+
   .main-about {
     align-items: center;
     background-color: $black;
@@ -8,7 +9,6 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* display: none; */
 
     .about {
       align-items: center;
@@ -22,7 +22,7 @@ main {
 
       h2 {
         font-family: $libre-basker;
-        font-size: 32px;
+        font-size: 40px;
         margin-top: 16px;
       }
 
@@ -51,7 +51,7 @@ main {
 
       h2 {
         font-family: $libre-basker;
-        font-size: 32px;
+        font-size: 40px;
         margin-top: 24px;
       }
 
@@ -82,12 +82,12 @@ main {
   }
 
   .main-projects {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 16px 0;
 
     h2 {
       color: $grey;
-      font-size: 48px;
+      font-size: 40px;
       font-family: $libre-basker;
       padding: 22px 0;
       text-align: center;
@@ -137,6 +137,12 @@ main {
               font-size: 24px;
               background-color: $light-yellow;
             }
+
+            &:hover i{
+              color: $light-yellow;
+              background-color: $black;
+              transition-duration: .5s;
+            }
           }
         }
       }
@@ -164,7 +170,7 @@ main {
     background-color: $black;
 
     .divider {
-      display: none;
+      margin: 32px auto;
     }
 
     .main-about {

@@ -9,6 +9,10 @@
   font-size: 16px;
 }
 
+body{
+  min-height: 100vh;
+}
+
 @import "header";
 @import "main-cont";
 @import "footer";
