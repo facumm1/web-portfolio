@@ -25,7 +25,9 @@ for (let element of navElements) {
 }
 
 
-cvBtn.addEventListener("click", () => {
+cvBtn.addEventListener("click", showPdfVisor);
+
+function showPdfVisor(){
   if (pdfViewer.style.display == "block") {
     pdfViewer.style.display = "none";
     cvBtn.innerHTML = "Download CV";
@@ -47,4 +49,4 @@ cvBtn.addEventListener("click", () => {
       return;
     }
   });
-});
+}

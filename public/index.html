@@ -6,31 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facundo's Portfolio</title>
 
+    <!-- Icon -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/assets/icons/fm-favicon.png"
+    />
+
     <!-- Styles -->
     <link rel="stylesheet" href="/public/css/main.css" />
 
     <!-- Fonts -->
 
-    <!-- Libre Baskerville -->
+    <!-- For titles -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Roboto -->
+    <!-- For text -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header id="header">
       <div class="nav-container">
-        <a class="logo" href="#"><i class="fa-solid fa-code"></i></a>
+        <a class="logo" href="#header"><i class="fa-solid fa-code"></i></a>
         <nav class="nav">
           <div class="mobile-nav">
             <i class="fa-solid fa-code"></i>
@@ -68,7 +77,7 @@
           <h2>Hello!</h2>
           <p>
             I'm
-            <strong>Facundo Mamani</strong>
+            <strong>Facundo</strong>
             <br />
             A Front-End Developer
           </p>
@@ -82,41 +91,41 @@
         <span></span>
       </div>
     </header>
-    
-    <main>
-      <section class="main-about" id="about">
+
+    <main id="about">
+      <section class="main-about">
         <h2>About me</h2>
         <div class="main-about-me">
-          <img src="/public/assets/images/about-me.png" alt="about-me-photo">
+          <img src="/public/assets/images/about-me.png" alt="about-me-photo" />
           <p>
-            ¡Hola! Soy Facundo, tengo 20 años y soy desarrollador front-end y
-            técnico electrónico. <br />
+            Hi! My name is Facundo Mamani, I'm 20 and I'm a front-end developer
+            and an electronic technician. <br />
             <br />
-            Comencé a programar durante mi periodo de aprendizaje en electrónica,
-            mi primer lenguaje fue C con el que aprendí los fundamentos básicos de
-            programación (estructuras de control, diagramas de flujo, etc.) y
-            desarrollé proyectos de robótica en sistemas embebidos como Arduino.
+            I started programming during my learning period in electronics, my
+            first language was C with which I learned the fundamentals of
+            programming (control structures, flow charts, etc.) and I also
+            developed projects related to robotics using embedded systems like
+            Arduino.
             <br />
             <br />
-            Mi objetivo es tener una primera experiencia laboral en el mundo del
-            IT y contribuir a diferentes proyectos laborales con mis conocimientos
-            y crecer tanto personal como profesionalmente en las adversidades que
-            se presenten.
+            My goal is to have a first work experience in the world of IT and
+            contribute to different work projects with my knowledge and grow
+            both personally and professionally.
           </p>
         </div>
         <div class="main-skills">
           <h3>My skills</h3>
           <div class="skills-images">
+            <img src="/public/assets/images/html.svg" alt="html" />
+            <img src="/public/assets/images/css.svg" alt="css" />
             <img src="/public/assets/images/js.svg" alt="js" />
             <img src="/public/assets/images/sass.svg" alt="sass" />
-            <img src="/public/assets/images/git.svg" alt="git" />
             <img src="/public/assets/images/react.svg" alt="react" />
-            <img src="/public/assets/images/css.svg" alt="css" />
-            <img src="/public/assets/images/html.svg" alt="html" />
+            <img src="/public/assets/images/git.svg" alt="git" />
           </div>
         </div>
       </section>
-      <section class="main-projects">
+      <section id="projects" class="main-projects">
         <h2>Projects</h2>
         <ul class="project-list">
           <li>
@@ -231,16 +240,18 @@
           </li>
         </ul>
         <p>
-          Maquetación proporcionada por
+          Templates provided by
           <a href="https://www.frontendmentor.io/home">frontendmentor.io</a>
         </p>
       </section>
     </main>
 
     <footer id="contact">
+      <span class="divider"></span>
       <h2>Contact</h2>
       <p>
-        Si te interesa, podés contactarme y ver mi actividad por estos medios.
+        Let's get in touch! <br />
+        You can contact me and see my activity by these links.
       </p>
       <div class="footer-links">
         <a href="mailto:facundomamani120@gmail.com">
