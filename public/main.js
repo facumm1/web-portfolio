@@ -9,44 +9,39 @@ const navElements = document.querySelectorAll(".nav-list > li");
 const cvBtn = document.querySelector(".cv-btn");
 const pdfViewer = document.querySelector(".pdf-viewer");
 
-headerCloser.addEventListener(
-  "click",
-  () => (headerNav.style.top = -150 + "%")
-);
-
-headerToggler.addEventListener("click", () => {
-  if (pdfViewer.style.display != "block") {
-    headerNav.style.top = 0;
-  }
-});
+headerToggler.addEventListener("click", toggleHeader);
+cvBtn.addEventListener("click", showPdfVisor);
 
 for (let element of navElements) {
   element.addEventListener("click", () => (headerNav.style.top = -150 + "%"));
 }
 
+function toggleHeader() {
+  if (pdfViewer.style.display != "block") {
+    headerNav.style.top = 0;
+    headerCloser.addEventListener("click", () => headerNav.style.top = -150 + "%");
+  }
+}
 
-cvBtn.addEventListener("click", showPdfVisor);
-
-function showPdfVisor(){
+function showPdfVisor() {
   if (pdfViewer.style.display == "block") {
-    pdfViewer.style.display = "none";
-    cvBtn.innerHTML = "Download CV";
-    document.body.style.overflow = "auto";
+    hidePdfVisor();
     return;
   }
 
-  pdfViewer.style.display = "block";
-  document.body.style.overflow = "hidden";
-  headerToggler.src = "/public/assets/icons/icon-close-light.svg";
   cvBtn.innerHTML = "Close CV";
+  document.body.style.overflow = "hidden";
+  headerToggler.src = "./assets/icons/icon-close-light.svg";
+  pdfViewer.style.display = "block";
 
   headerToggler.addEventListener("click", () => {
-    if (pdfViewer.style.display == "block") {
-      headerToggler.src = "/public/assets/icons/icon-hamburger.svg";
-      pdfViewer.style.display = "none";
-      document.body.style.overflow = "auto";
-      cvBtn.innerHTML = "Download CV";
-      return;
-    }
+    hidePdfVisor();
   });
+}
+
+function hidePdfVisor() {
+  cvBtn.innerHTML = "Download CV";
+  document.body.style.overflow = "auto";
+  headerToggler.src = "./assets/icons/icon-hamburger.svg";
+  pdfViewer.style.display = "none";
 }

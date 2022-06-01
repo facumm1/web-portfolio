@@ -1,5 +1,5 @@
 footer {
-  color: $grey;
+  color: $white;
   background-color: $black;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ footer {
         transition-duration: 0.5s;
       }
       span {
-        color: $grey;
+        color: $white;
         font-weight: 800;
         font-family: $font-text;
         padding: 16px 0;
@@ -64,7 +64,7 @@ footer {
         font-size: 18px;
 
         &:hover {
-          color: $grey;
+          color: $white;
           transition-duration: 0.5s;
         }
       }
